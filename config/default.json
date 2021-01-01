@@ -1,3 +1,4 @@
 {
-	"mongoURI": "mongodb+srv://chidraeve:wX7YQ5GcDpf2JpF@cluster0.73dix.mongodb.net/<dbname>?retryWrites=true&w=majority"
+	"mongoURI": "mongodb+srv://chidraeve:wX7YQ5GcDpf2JpF@cluster0.73dix.mongodb.net/<dbname>?retryWrites=true&w=majority",
+	"jwtSecret": "aez6Oh2a"
 }
