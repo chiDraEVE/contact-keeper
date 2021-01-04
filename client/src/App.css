@@ -386,12 +386,12 @@ table th {
 
 /* Animation (Add After) */
 .item-enter {
-  opacity: 0.01;
+  opacity: 0;
 }
 
 .item-enter-active {
   opacity: 1;
-  transition: opacity 1000ms ease-in;
+  transition: opacity 500ms ease-in;
 }
 
 .item-exit {
@@ -400,9 +400,9 @@ table th {
 }
 
 .item-exit-active {
-  opacity: 0.01;
+  opacity: 0;
   /* transform: translateX(1000px); */
-  transition: opacity 1000ms ease-in;
+  transition: opacity 500ms ease-in;
 }
 
 /* Mobile Styles */
