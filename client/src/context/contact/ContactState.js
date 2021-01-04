@@ -12,7 +12,7 @@ import {
 	CLEAR_FILTER
 } from "../types"
 
-const ContactState = (props) => {
+const ContactState = props => {
 	const initialState = {
 		contacts: [
 			{
@@ -43,18 +43,18 @@ const ContactState = (props) => {
 	const [state, dispatch] = useReducer(contactReducer, initialState)
 
 	// Add Contact
-	const addContact = (contact) => {
+	const addContact = contact => {
 		contact.id = uuidv4()
 		dispatch({ type: ADD_CONTACT, payload: contact })
 	}
 
 	// Delete Contact
-	const deleteContact = (id) => {
+	const deleteContact = id => {
 		dispatch({ type: DELETE_CONTACT, payload: id })
 	}
 
 	// Set Current Contact
-	const setCurrent = (contact) => {
+	const setCurrent = contact => {
 		dispatch({ type: SET_CURRENT, payload: contact })
 	}
 
@@ -64,6 +64,9 @@ const ContactState = (props) => {
 	}
 
 	// Update Contact
+	const updateContact = contact => {
+		dispatch({ type: UPDATE_CONTACT, payload: contact })
+	}
 
 	// Filter Contacts
 
@@ -75,6 +78,7 @@ const ContactState = (props) => {
 				contacts: state.contacts,
 				current: state.current,
 				addContact,
+				updateContact,
 				deleteContact,
 				setCurrent,
 				clearCurrent
