@@ -2,5 +2,8 @@
 /node_modules/
 /package-lock.json
 /.idea/
+/contact-keeper.iml
+/client/node_modules/
+/client/.eslintcache
 /client/node_modules/
 /client/.eslintcache
