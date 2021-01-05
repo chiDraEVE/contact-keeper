@@ -1,34 +1,40 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Link } from "react-router-dom";
+import React from "react"
+import PropTypes from "prop-types"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { Link } from "react-router-dom"
 
 const Navbar = ({ title, icon }) => {
-  return (
-    <div className="navbar bg-primary">
-      <h1>
-        <FontAwesomeIcon icon={icon} /> {title}
-      </h1>
-      <ul>
-        <li>
-          <Link to="/">Home</Link>
-        </li>
-        <li>
-          <Link to="/about">About</Link>
-        </li>
-      </ul>
-    </div>
-  );
-};
+	return (
+		<div className="navbar bg-primary">
+			<h1>
+				<FontAwesomeIcon icon={icon} /> {title}
+			</h1>
+			<ul>
+				<li>
+					<Link to="/">Home</Link>
+				</li>
+				<li>
+					<Link to="/about">About</Link>
+				</li>
+				<li>
+					<Link to="/register">Register</Link>
+				</li>
+				<li>
+					<Link to="/login">Login</Link>
+				</li>
+			</ul>
+		</div>
+	)
+}
 
 Navbar.propTypes = {
-  title: PropTypes.string.isRequired,
-  icon: PropTypes.array,
-};
+	title: PropTypes.string.isRequired,
+	icon: PropTypes.array
+}
 
 Navbar.defaultProps = {
-  title: "Contact Keeper",
-  icon: ["fas", "id-card-alt"],
-};
+	title: "Contact Keeper",
+	icon: ["fas", "id-card-alt"]
+}
 
-export default Navbar;
+export default Navbar
