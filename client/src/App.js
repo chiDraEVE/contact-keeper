@@ -5,7 +5,8 @@ import {
 	faIdCardAlt,
 	faInfoCircle,
 	faPhone,
-	fas
+	fas,
+	faSignOutAlt
 } from "@fortawesome/free-solid-svg-icons"
 import Navbar from "./components/layout/Navbar"
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom"
@@ -19,7 +20,14 @@ import Login from "./components/auth/Login"
 import AlertState from "./context/alert/AlertState"
 import Alerts from "./components/layout/Alerts"
 
-library.add(fas, faIdCardAlt, faEnvelopeOpen, faPhone, faInfoCircle)
+library.add(
+	fas,
+	faIdCardAlt,
+	faEnvelopeOpen,
+	faPhone,
+	faInfoCircle,
+	faSignOutAlt
+)
 
 const App = () => {
 	return (
