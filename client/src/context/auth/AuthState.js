@@ -41,7 +41,7 @@ const AuthState = props => {
 	// Register User
 	const register = async formData => {
 		const config = {
-			header: {
+			headers: {
 				"Content-Type": "application/json"
 			}
 		}
@@ -53,7 +53,7 @@ const AuthState = props => {
 				type: REGISTER_SUCCESS,
 				payload: res.data
 			})
-			await loadUser()
+			loadUser()
 		} catch (err) {
 			dispatch({
 				type: REGISTER_FAIL,
@@ -65,7 +65,7 @@ const AuthState = props => {
 	// Login User
 	const login = async formData => {
 		const config = {
-			header: {
+			headers: {
 				"Content-Type": "application/json"
 			}
 		}
